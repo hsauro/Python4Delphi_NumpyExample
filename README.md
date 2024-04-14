@@ -12,7 +12,7 @@ Win64/
 │  ├─ Python files
 ```
 
-Examples are stored in the examples.txt file which uses a simple format for storing test examples. I also used json to store the exmaples (code is still in the source) but found it to be inconvenient to add new examples so I reverted to a simple text format instead.
+Examples are stored in the examples.txt file which uses a simple format for storing test examples and will likely horrify seasoned developers in this day and age. However, at one point I used json to store the examples (code is still in the source) but found it to be very inconvenient to add new examples using a text editor so I reverted to a simple text format instead.
 
 I added a release binary to make it easy to try out withut having to compile the code. 
 
