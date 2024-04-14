@@ -1,0 +1,95 @@
+&&
+Return a list
+from app import host
+import numpy as np
+
+x = host.getList()
+print ('Expected: ', '[1, 2, 3, True, 5, False]')
+print ('Received: ', x)
+
+&&
+Create a list using SetItem
+from app import host
+import numpy as np
+
+x = host.getListUsingSetItems()
+print (x)
+
+&&
+Return a Delphi 4 by 5 array as a numpy array
+from app import host
+import numpy as np
+
+x = host.getNumpy()
+print (x)
+
+&&
+Pass a list to the function and return it
+from app import host
+import numpy as np
+
+x = host.echoList([3,6,1,9,6.7])
+print (x)
+
+&&
+Given a list, append an element and return the modified list
+from app import host
+import numpy as np
+
+x = host.appendToList ([1,2,3])
+print (x)
+
+&&
+Construct a 2x2 matrix and return is as a numpy array
+from app import host
+import numpy as np
+
+x = host.getMatrix ()
+print (x)
+
+&&
+Pass in a 1d number array of integers and return it to caller
+from app import host
+import numpy as np
+
+x = host.show1darrayi (np.array([1,2,3,4,5]))
+print (x)
+
+&&
+Access a single element in a 1D double array
+from app import host
+import numpy as np
+
+m = np.random.rand (10)
+
+for i in range (10):
+    x = host.accessElement1DArray (m, i)
+    print ('Expected: ', m[i], ', Received: ', x, ' Diff = ', m[i]-x)
+
+&&
+Pass in a 1d number array of doubles and return it to caller
+from app import host
+import numpy as np
+
+x = host.show1darrayd (np.array([3.4, 5.6, 7.8]))
+print (x)
+
+&&
+Pass in a 2d number array of doubles and return it to caller
+from app import host
+import numpy as np
+
+x = host.show2darrayd (np.array([[3.4, 5.6], [7.8, 0.6]]))
+print (x)
+
+&&
+Pass in a 2d number array of doubles and return it to caller
+from app import host
+import numpy as np
+
+# Generate random 3 by 4 numy array
+r = np.random.rand(3, 4)
+
+x = host.show2darrayd (r)
+print ('Will return zero matrix if the code is working correctly')
+print (r-x)

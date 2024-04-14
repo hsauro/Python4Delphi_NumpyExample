@@ -1,0 +1,100 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Comb'
+  ClientHeight = 584
+  ClientWidth = 744
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object moOutput: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 24.000000000000000000
+    Position.Y = 304.000000000000000000
+    Size.Width = 689.000000000000000000
+    Size.Height = 238.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 685.000000000000000000
+    Viewport.Height = 234.000000000000000000
+  end
+  object btnRun: TButton
+    Anchors = [akLeft, akBottom]
+    Position.X = 24.000000000000000000
+    Position.Y = 550.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Run'
+    OnClick = btnRunClick
+  end
+  object moInput: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'from  app import host'
+      'import numpy as np'
+      ' '
+      'x = host.getList (); print ("getList = ", x)'
+      'x = host.getNumPy(); print ("getNumPy = "); print (x)'
+      ''
+      'print ("version = ", host.getVersion())'
+      'x = host.getMatrix()'
+      'print ("2 by 2 matrix = "); print (x)'
+      'y = np.linalg.inv (x)'
+      'print ("Inverse = "); print (y)')
+    StyledSettings = [Family, Style, FontColor]
+    TextSettings.Font.Size = 14.000000000000000000
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 24.000000000000000000
+    Position.Y = 29.000000000000000000
+    Size.Width = 689.000000000000000000
+    Size.Height = 242.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Viewport.Width = 685.000000000000000000
+    Viewport.Height = 238.000000000000000000
+  end
+  object btnClear: TButton
+    Anchors = [akLeft, akBottom]
+    Position.X = 112.000000000000000000
+    Position.Y = 550.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Clear'
+    OnClick = btnClearClick
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 24.000000000000000000
+    Position.Y = 4.000000000000000000
+    TextSettings.Font.Size = 14.000000000000000000
+    Text = 'Input:'
+    TabOrder = 12
+    object Label2: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 275.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
+      Text = 'Output:'
+      TabOrder = 4
+    end
+  end
+  object cboExamples: TComboBox
+    DropDownCount = 14
+    Position.X = 112.000000000000000000
+    Position.Y = 3.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    OnChange = cboExamplesChange
+  end
+end
