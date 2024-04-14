@@ -5,7 +5,7 @@ The code assumes that the python distibution is in the directory called 'Python'
 
 ```      
 Win64/
-├─ Delphi4Python.exe
+├─ DelphiExecutable.exe
 ├─ Python/
 │  ├─ Python files
 ```
