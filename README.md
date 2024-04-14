@@ -10,4 +10,8 @@ Win64/
 │  ├─ Python files
 ```
 
+Examples are stored in the examples.txt file which uses a simple format for storing test examples. I also used json to store the exmaples (code is still in the source) but found it to be inconvenient to add new examples so I reverted to a simple text format instead.
+
+I added a release binary to make it easy to try out withut having to compile the code. 
+
 This code requries the latest distribution of [Delphi4Python](https://github.com/pyscripter/python4delphi). It will **not** work with the version that gets installed from Getit. 
